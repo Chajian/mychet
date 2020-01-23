@@ -124,7 +124,11 @@
       <dir>$PROJECT_DIR$/src/main/java/com/yezi/chet/community/socket/operation</dir>
     </dirStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1RC7YTX8BHwf3dbERU50ug8XPYg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
@@ -286,7 +290,7 @@
       <workItem from="1579676537321" duration="3110000" />
       <workItem from="1579692873075" duration="6951000" />
       <workItem from="1579709469806" duration="1765000" />
-      <workItem from="1579748817723" duration="4019000" />
+      <workItem from="1579748817723" duration="4559000" />
     </task>
     <servers />
   </component>
@@ -301,5 +305,16 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
