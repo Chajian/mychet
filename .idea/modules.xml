@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/mychet.iml" filepath="$PROJECT_DIR$/.idea/mychet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mychet.main.iml" filepath="$PROJECT_DIR$/.idea/modules/mychet.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mychet.test.iml" filepath="$PROJECT_DIR$/.idea/modules/mychet.test.iml" />
+    </modules>
+  </component>
+</project>
