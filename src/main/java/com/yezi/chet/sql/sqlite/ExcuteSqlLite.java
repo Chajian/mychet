@@ -12,10 +12,14 @@ public class ExcuteSqlLite implements BaseExcuteSql {
 
     Connection connection;
     String table = null;
+    public String person_table = null;
+    public String friends_table = null;
 
-    public ExcuteSqlLite(Connection connection,String table) {
+    public ExcuteSqlLite(Connection connection,String table,String friends_table,String person_table) {
         this.connection = connection;
         this.table = table;
+        this.friends_table = friends_table;
+        this.person_table = person_table;
     }
 
     @Override
@@ -109,5 +113,7 @@ public class ExcuteSqlLite implements BaseExcuteSql {
         return null;
     }
 
-
+    public void UserTable(String table) {
+        this.table = table;
+    }
 }

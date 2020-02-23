@@ -1,37 +1,73 @@
 package com.yezi.chet.community.netty.handler;
 
-import com.yezi.chet.community.operation.BaseOperation;
-import com.yezi.chet.community.operation.LoginOperation;
-import com.yezi.chet.community.operation.RegisterOperation;
-import com.yezi.chet.data.ApplicationData;
+import com.yezi.chet.community.operation.*;
+import com.yezi.chet.data.SendInfo;
 import com.yezi.chet.data.constant.Permission;
-import com.yezi.chet.sql.sqlite.person.PersonExcuteSqlLite;
+import com.yezi.chet.sql.MyBatis;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 
 public class BodyMonitor extends ChannelInboundHandlerAdapter {
 
     private BaseOperation baseOperation;
-    private PersonExcuteSqlLite excuteSqlLite;
+    private MyBatis excuteSqlLite;
 
-    public BodyMonitor(PersonExcuteSqlLite excuteSqlLite) {
+    public BodyMonitor(MyBatis excuteSqlLite) {
         this.excuteSqlLite = excuteSqlLite;
+        baseOperation = new BaseOperation(excuteSqlLite.getChetDao());
     }
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        ApplicationData data = (ApplicationData)msg;
-        switch (data.type){
+        SendInfo data = (SendInfo)msg;
+        int type = Permission.NULL;
+        switch (data.getData().getType()){
             case Permission.COMMUNITY_LOGIN:
-                baseOperation = new LoginOperation(excuteSqlLite);
+                baseOperation = new LoginOperation(excuteSqlLite.getChetDao());
                 break;
 
             case Permission.COMMUNITY_REGISTER:
-                baseOperation = new RegisterOperation(excuteSqlLite);
+                baseOperation = new RegisterOperation(excuteSqlLite.getChetDao());
+                break;
+
+            case Permission.ADD_FRIEND:
+                baseOperation = new AddFriendOperation(excuteSqlLite.getChetDao());
+                break;
+
+            case Permission.SEND_MESSAGE_FRIENDS:
+                baseOperation = new FriendMessageOperation(excuteSqlLite.getChetDao());
+                break;
+
+            case Permission.GET_ALL_THING:
+                baseOperation = new GetAllThingOpeartion(excuteSqlLite.getChetDao(),ctx);
+                break;
+
+            case Permission.SEARCH_ADD_FRIENDS:
+                baseOperation = new SearchFriendsOpeartion(excuteSqlLite.getChetDao());
+                break;
+
+            case Permission.GET_FRIENDS_INFO:
+                baseOperation = new GetFriendsOpeartion(excuteSqlLite.getChetDao());
+                break;
+
+
+            case Permission.COMMUNITY_TRY:
+                baseOperation = new TryCommunityOpeartion(excuteSqlLite.getChetDao());
+                break;
+
+            case Permission.ADD_FRIEND_AGREE:
+                baseOperation = new AddFriendAgreeOperation(excuteSqlLite.getChetDao());
                 break;
         }
-        int type = baseOperation.opeartion(data);
-        data.setType(type);
+        int success = baseOperation.opeartion(data);
+        if(success != Permission.NULL) {
+            if(success == Permission.FAIL){
+                data.getData().setType(success);
+            }else {
+                excuteSqlLite.commit();
+            }
+            ctx.writeAndFlush(data);
+        }
     }
 
     @Override

@@ -1,8 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="mychet:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="e867726b-6084-4d0b-9deb-c7445ef63fb0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/mychet_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apiguardian_apiguardian_api_1_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_api_5_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_engine_5_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_commons_1_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_engine_1_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_vintage_junit_vintage_engine_5_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_mybatis_mybatis_3_5_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bizideal20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bizideal21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bizideal22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bizideal99.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/resources/config/mybatis-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Test/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yezi/chet/community/operation/GetAllThingOpeartion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yezi/chet/community/operation/GetFriendsOpeartion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yezi/chet/community/operation/SearchFriendsOpeartion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yezi/chet/community/operation/SenderMessageOpeartion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yezi/chet/community/operation/TryCommunityOpeartion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yezi/chet/data/user/Friend.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yezi/chet/data/user/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yezi/chet/sql/MyBatis.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yezi/chet/sql/dao/ChetDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/yezi/chet/sql/dao/ChetDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/config/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_13.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/mychet.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/mychet.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/mychet.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/mychet.test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/mychet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mychet.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/yezi/chet/community/operation/BaseOperation.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/yezi/chet/community/operation/BaseOperation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/yezi/chet/community/operation/LoginOperation.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/yezi/chet/community/operation/LoginOperation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/yezi/chet/community/operation/Opeartion.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/yezi/chet/community/operation/Opeartion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/yezi/chet/community/operation/RegisterOperation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/yezi/chet/sql/BaseExcuteSql.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/yezi/chet/sql/sqlite/ExcuteSqlLite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/yezi/chet/sql/sqlite/person/PersonExcuteSqlLite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mypersons.db" beforeDir="false" afterPath="$PROJECT_DIR$/mypersons.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yezi/chet/community/netty/BaseSocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yezi/chet/community/netty/BaseSocketServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yezi/chet/community/netty/handler/BodyMonitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yezi/chet/community/netty/handler/BodyMonitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yezi/chet/community/netty/handler/HeadMonitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yezi/chet/community/netty/handler/HeadMonitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yezi/chet/community/netty/handler/InitializerMonitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yezi/chet/community/netty/handler/InitializerMonitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yezi/chet/community/netty/interceptor/DataDecode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yezi/chet/community/netty/interceptor/DataDecode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yezi/chet/community/netty/interceptor/DataEncode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yezi/chet/community/netty/interceptor/DataEncode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yezi/chet/community/operation/AddFriendAgreeOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yezi/chet/community/operation/AddFriendAgreeOperation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yezi/chet/community/operation/AddFriendOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yezi/chet/community/operation/AddFriendOperation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yezi/chet/community/operation/BaseOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yezi/chet/community/operation/BaseOperation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yezi/chet/community/operation/FriendMessageOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yezi/chet/community/operation/FriendMessageOperation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yezi/chet/community/operation/LoginOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yezi/chet/community/operation/LoginOperation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yezi/chet/community/operation/Opeartion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yezi/chet/community/operation/Opeartion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yezi/chet/community/operation/RegisterOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yezi/chet/community/operation/RegisterOperation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yezi/chet/community/operation/TokenOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yezi/chet/community/operation/TokenOperation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yezi/chet/data/ApplicationData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yezi/chet/data/ApplicationData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yezi/chet/data/SendInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yezi/chet/data/SendInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yezi/chet/data/constant/Permission.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yezi/chet/data/constant/Permission.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yezi/chet/data/tool/Tool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yezi/chet/data/tool/Tool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yezi/chet/data/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yezi/chet/data/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yezi/chet/factory/BaseSqlFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yezi/chet/factory/BaseSqlFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yezi/chet/factory/PersonSqlFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yezi/chet/factory/PersonSqlFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yezi/chet/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yezi/chet/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yezi/chet/sql/sqlite/ExcuteSqlLite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yezi/chet/sql/sqlite/ExcuteSqlLite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yezi/chet/sql/sqlite/person/PersonExcuteSqlLite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yezi/chet/sql/sqlite/person/PersonExcuteSqlLite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yezi/chet/sql/sqlite/person/PersonSqlLite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yezi/chet/sql/sqlite/person/PersonSqlLite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yezi/chet/tools/ByteObjConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yezi/chet/tools/ByteObjConverter.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,6 +165,26 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="mychet" type="f1a62948:ProjectNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+                <item name="main" type="396b929e:GradleViewContributor$SourceSetNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="mychet" type="f1a62948:ProjectNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+                <item name="test" type="396b929e:GradleViewContributor$SourceSetNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="mychet" type="f1a62948:ProjectNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+                <item name="test" type="396b929e:GradleViewContributor$SourceSetNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="mychet" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
               <path>
@@ -108,49 +209,49 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="JavaFXApplication" />
         <option value="Interface" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>close</find>
-    </findStrings>
-    <replaceStrings>
-      <replace />
-    </replaceStrings>
-    <dirStrings>
-      <dir>$PROJECT_DIR$/src/main/java/com/yezi/chet/community/socket/operation</dir>
-    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1RC7YTX8BHwf3dbERU50ug8XPYg" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568437213694" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/yezi/chet/community/operation" />
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/config" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3448276" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/test" />
+      <recent name="$PROJECT_DIR$/src/main/resources/com/yezi/chet/sql/dao" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.yezi.chet.sql" />
       <recent name="com.yezi.chet.community.operation" />
       <recent name="com.yezi.chet.tools" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/config" />
       <recent name="$PROJECT_DIR$/src/main/java/com/yezi/chet/community/operation" />
       <recent name="$PROJECT_DIR$/src/main/java/com/yezi/chet" />
       <recent name="$PROJECT_DIR$/lib" />
@@ -168,25 +269,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.mychet [clean]">
+  <component name="RunManager" selected="Application.Main (1)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.yezi.chet.main.Main" />
       <module name="mychet.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.yezi.chet.main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.yezi.chet.main.Main" />
-      <module name="mychet" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.yezi.chet.main.*" />
@@ -254,13 +340,23 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="Main.Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mychet.main" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <option name="METHOD_NAME" value="Test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="JUnit.Main.Test" />
+        <item itemvalue="Gradle.mychet [dependencies]" />
         <item itemvalue="Gradle.mychet [build]" />
         <item itemvalue="Gradle.mychet [clean]" />
-        <item itemvalue="Gradle.mychet [dependencies]" />
-        <item itemvalue="Application.Main (1)" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -292,18 +388,33 @@
       <workItem from="1579676537321" duration="3110000" />
       <workItem from="1579692873075" duration="6951000" />
       <workItem from="1579709469806" duration="1765000" />
-      <workItem from="1579748817723" duration="4881000" />
+      <workItem from="1579748817723" duration="9681000" />
+      <workItem from="1579848008262" duration="3156000" />
+      <workItem from="1579924490820" duration="4831000" />
+      <workItem from="1579939624744" duration="8641000" />
+      <workItem from="1580012811346" duration="8171000" />
+      <workItem from="1580103824475" duration="7413000" />
+      <workItem from="1580277918964" duration="1659000" />
+      <workItem from="1580302156991" duration="6945000" />
+      <workItem from="1580364465738" duration="3012000" />
+      <workItem from="1580389081879" duration="5582000" />
+      <workItem from="1580528716140" duration="3562000" />
+      <workItem from="1580552541190" duration="5306000" />
+      <workItem from="1580624390451" duration="8629000" />
+      <workItem from="1580650736227" duration="9414000" />
+      <workItem from="1580719776409" duration="13659000" />
+      <workItem from="1580840227627" duration="1543000" />
+      <workItem from="1580885853730" duration="2378000" />
+      <workItem from="1580971815537" duration="5390000" />
+      <workItem from="1581138094292" duration="10503000" />
+      <workItem from="1581491106557" duration="879000" />
+      <workItem from="1581599150227" duration="261000" />
+      <workItem from="1581604506208" duration="1149000" />
+      <workItem from="1581611892113" duration="3988000" />
+      <workItem from="1581655174684" duration="8294000" />
+      <workItem from="1582444727265" duration="633000" />
     </task>
     <servers />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -313,10 +424,15 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

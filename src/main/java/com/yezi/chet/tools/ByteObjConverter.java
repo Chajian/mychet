@@ -63,4 +63,8 @@ public class ByteObjConverter {
         }
         return bytes;
     }
+
+    public static String BytesToAccount(byte[] bytes){
+        return new String(bytes);
+    }
 }

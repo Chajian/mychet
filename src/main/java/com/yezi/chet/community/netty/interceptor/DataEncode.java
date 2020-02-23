@@ -13,6 +13,7 @@ public class DataEncode extends MessageToByteEncoder {
     @Override
     protected void encode(ChannelHandlerContext channelHandlerContext, Object o, ByteBuf byteBuf) throws Exception {
         byte[] datas = ByteObjConverter.objectToByte(o);
+        byteBuf.writeInt(datas.length);
         byteBuf.writeBytes(datas);
         channelHandlerContext.flush();
     }

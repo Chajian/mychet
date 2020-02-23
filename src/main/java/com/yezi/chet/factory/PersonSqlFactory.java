@@ -22,12 +22,13 @@ public class PersonSqlFactory implements BaseSqlFactory{
     }
 
     @Override
-    public BaseExcuteSql getExcuteSql(Connection connection, String table) {
-        return new PersonExcuteSqlLite(connection, table);
+    public BaseExcuteSql getExcuteSql(Connection connection, String table,String friends_table,String
+                                       person_table) {
+        return new PersonExcuteSqlLite(connection, table,friends_table,person_table);
     }
 
 
-    public PersonExcuteSqlLite getExcuteSql(Connection connection){
-        return new PersonExcuteSqlLite(connection, "Persons");
+    public PersonExcuteSqlLite getExcuteSql(Connection connection,String friends_table,String person_table){
+        return new PersonExcuteSqlLite(connection, "Persons",friends_table,person_table);
     }
 }

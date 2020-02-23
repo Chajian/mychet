@@ -1,9 +1,10 @@
 package com.yezi.chet.community.operation;
 
-import com.yezi.chet.data.ApplicationData;
+import com.yezi.chet.data.SendInfo;
 import com.yezi.chet.data.constant.Permission;
+import com.yezi.chet.data.tool.Tool;
 import com.yezi.chet.data.user.User;
-import com.yezi.chet.sql.sqlite.person.PersonExcuteSqlLite;
+import com.yezi.chet.sql.dao.ChetDao;
 
 import java.sql.SQLException;
 
@@ -12,17 +13,19 @@ import java.sql.SQLException;
  */
 public class RegisterOperation extends BaseOperation {
 
-    public RegisterOperation(PersonExcuteSqlLite excuteSqlLite) {
+    public RegisterOperation(ChetDao excuteSqlLite) {
         super(excuteSqlLite);
     }
 
     @Override
-    public int opeartion(ApplicationData data) {
+    public int opeartion(SendInfo data) {
         try {
-            System.out.println("注册成功!");
-            User user = data.getUser();
+            User user = data.getData().getUser();
             if (checkUser(user)&&!excuteSqlLite.isBeing(user.getAccount())){
                 excuteSqlLite.registerUser(user);//注册账号
+                if(user.getPhoto()!=null)
+                    Tool.byteToFile(user.getPhoto(),user.getAccount());
+                System.out.println("注册成功!");
                 return Permission.SUCCEFF;
             }
         }

@@ -1,8 +1,6 @@
 package com.yezi.chet.sql.sqlite.person;
 
 import com.yezi.chet.factory.PersonSqlFactory;
-import com.yezi.chet.sql.BaseCreateSql;
-import com.yezi.chet.sql.BaseExcuteSql;
 
 public class PersonSqlLite {
 
@@ -13,7 +11,7 @@ public class PersonSqlLite {
     public PersonSqlLite() {
         PersonSqlFactory personSqlFactory = new PersonSqlFactory();
         createSqlLite = personSqlFactory.getCreateSql();
-        excuteSql = personSqlFactory.getExcuteSql(createSqlLite.create());
+        excuteSql = personSqlFactory.getExcuteSql(createSqlLite.create(),"friends","Persons");
     }
 
     public PersonExcuteSqlLite getExcuteSql() {

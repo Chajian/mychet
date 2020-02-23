@@ -2,14 +2,14 @@ package com.yezi.chet.community.netty.handler;
 
 import com.yezi.chet.community.netty.interceptor.DataDecode;
 import com.yezi.chet.community.netty.interceptor.DataEncode;
-import com.yezi.chet.sql.sqlite.person.PersonExcuteSqlLite;
+import com.yezi.chet.sql.MyBatis;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 
 public class InitializerMonitor extends ChannelInitializer<io.netty.channel.Channel> {
-    private PersonExcuteSqlLite excuteSqlLite;
+    private MyBatis excuteSqlLite;
 
-    public InitializerMonitor(PersonExcuteSqlLite excuteSqlLite) {
+    public InitializerMonitor(MyBatis excuteSqlLite) {
         this.excuteSqlLite = excuteSqlLite;
     }
 

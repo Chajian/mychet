@@ -13,6 +13,6 @@ public interface BaseSqlFactory {
 
     BaseCreateSql getCreateSql(String url, String sql_name, String sql_commend);
 
-    BaseExcuteSql getExcuteSql(Connection connection, String table);
+    BaseExcuteSql getExcuteSql(Connection connection, String table,String friends_table,String person_table);
 
 }

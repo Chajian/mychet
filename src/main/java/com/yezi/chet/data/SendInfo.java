@@ -13,6 +13,7 @@ public class SendInfo implements Serializable {
     private String sender_account = null;
     private String reciver_account = null;
     private ApplicationData data;//发送的数据；
+    private Object data2;
 
     public SendInfo(String reciver_account, ApplicationData data) {
         this.reciver_account = reciver_account;
@@ -48,4 +49,20 @@ public class SendInfo implements Serializable {
     }
 
 
+    @Override
+    public String toString() {
+        return "SendInfo{" +
+                "sender_account='" + sender_account + '\'' +
+                ", reciver_account='" + reciver_account + '\'' +
+                ", data=" + data +
+                '}';
+    }
+
+    public Object getData2() {
+        return data2;
+    }
+
+    public void setData2(Object data2) {
+        this.data2 = data2;
+    }
 }

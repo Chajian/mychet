@@ -1,9 +1,11 @@
 package com.yezi.chet.main;
 
-import com.yezi.chet.community.socket.BaseSocketServer;
+import com.yezi.chet.community.netty.BaseSocketServer;
 
 public class Main {
+    public static BaseSocketServer server;
     public static void main(String[] args){
-        BaseSocketServer server = BaseSocketServer.getCommunity();
+        server =BaseSocketServer.getCommunity();
+        BaseSocketServer.getCommunity();
     }
 }

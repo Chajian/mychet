@@ -1,7 +1,6 @@
 package com.yezi.chet.data.user;
 
 import java.io.Serializable;
-import java.util.Hashtable;
 import java.util.List;
 
 /**
@@ -21,29 +20,29 @@ import java.util.List;
  */
 public class User implements Serializable {
     private static final long serialVersionUID = 1L;//版本号
-    public Hashtable<String,Object> info = new Hashtable<>();//存储用户信息
+    public int id;
+    public String info;//存储用户信息
     public String account;//账号
     public String password;//密码
-    public List<String> friends = null;
+    public String online;
+    public byte[] photo;
+    public String registertime;
+    private List<Friend> friends;
 
-    public User(Hashtable<String, Object> info, String account, String password) {
+    public User(String info, String account, String password, String online, byte[] photo, String registertime) {
         this.info = info;
         this.account = account;
         this.password = password;
+        this.online = online;
+        this.photo = photo;
+        this.registertime = registertime;
+//        Log.i("sdf",this.photo);
+    }
+
+    public User() {
     }
 
     //添加用户数据到列表里
-    public void addInfo(String name,Object value){
-        info.put(name,value);
-    }
-
-    public List<String> getFriends() {
-        return friends;
-    }
-
-    public void setFriends(List<String> friends) {
-        this.friends = friends;
-    }
 
 
     public String getAccount() {
@@ -54,8 +53,61 @@ public class User implements Serializable {
         return serialVersionUID;
     }
 
-    public Hashtable<String, Object> getInfo() {
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getInfo() {
         return info;
+    }
+
+    public void setInfo(String info) {
+        this.info = info;
+    }
+
+    public void setAccount(String account) {
+        this.account = account;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getOnline() {
+        return online;
+    }
+
+    public void setOnline(String online) {
+        this.online = online;
+    }
+
+    public byte[] getPhoto() {
+//        System.out.println(this.photo.length+":"+ Arrays.toString(photo));
+        return this.photo;
+    }
+
+    public void setPhotoOne(byte[] photo){
+        this.photo = photo;
+    }
+
+    public List<Friend> getFriends() {
+        return friends;
+    }
+
+    public void setFriends(List<Friend> friends) {
+        this.friends = friends;
+    }
+
+    public String getRegistertime() {
+        return registertime;
+    }
+
+    public void setRegistertime(String registertime) {
+        this.registertime = registertime;
     }
 
     public String getPassword() {
@@ -63,7 +115,20 @@ public class User implements Serializable {
     }
 
     //获取玩家是否在线状态
-    public boolean isOnline(){
-        return (int)info.get("online") == 0 ? false:true;
+    public boolean CheckOnline(){
+        return Integer.parseInt(online) == 0 ? false:true;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id='" + id + '\'' +
+                ", info=" + info +
+                ", account='" + account + '\'' +
+                ", password='" + password + '\'' +
+                ", online='" + online + '\'' +
+                ", photo='" + photo + '\'' +
+                ", registertime='" + registertime + '\'' +
+                '}';
     }
 }

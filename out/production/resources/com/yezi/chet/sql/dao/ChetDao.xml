@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yezi.chet.sql.dao.ChetDao">
+    <!--    <select id="getUser" resultType="com.example.demo.data.User">-->
+    <!--        SELECT * FROM Users WHERE id = #{id}-->
+    <!--    </select>-->
+<!--    <resultMap id="activity" type="com.example.demo.data.Activity">-->
+<!--        <id column="activity_id" property="id"/>-->
+<!--        <result column="activity_type" property="type"/>-->
+<!--        <result column="activity_name" property="activity_name"/>-->
+<!--        <result column="activity_description" property="activity_description"/>-->
+<!--        <result column="join_nummber" property="join_nummber"/>-->
+<!--        <result column="picture_path" property="picture_path"/>-->
+<!--    </resultMap>-->
+    <resultMap id="User" type="com.yezi.chet.data.user.User">
+        <result column="account" property="account"/>
+        <result column="password" property="password"/>
+        <result column="info" property="info"/>
+        <result column="photo" property="photo" jdbcType="BLOB" typeHandler="org.apache.ibatis.type.BlobTypeHandler"/>
+        <result column="online" property="online"/>
+        <result column="registertime" property="registertime"/>
+    </resultMap>
+
+    <resultMap id="Message" type="com.yezi.chet.data.user.Message">
+        <result column="sender_account" property="sender_account"/>
+        <result column="reciver_account" property="reciver_account"/>
+        <result column="message" property="message"/>
+    </resultMap>
+
+    <select id="getUser" resultType="com.yezi.chet.data.user.User">
+        SELECT account,password,info,registertime FROM Persons WHERE account = #{id}
+    </select>
+
+    <select id="checkUser" resultType="java.lang.Boolean">
+        SELECT count(id) FROM Persons WHERE account = #{account} and password = #{pass}
+    </select>
+
+    <select id="isBeing" resultType="java.lang.Boolean">
+        SELECT count(id) FROM Persons WHERE account = #{account}
+    </select>
+
+    <select id="isOnline" resultType="java.lang.Boolean">
+        SELECT online FROM Persons WHERE account = #{account}
+    </select>
+
+<!--    判断account1请求account2好友是否存在-->
+    <select id="isRequest" resultType="java.lang.Boolean">
+        SELECT count(id) FROM friends WHERE account_1 = #{sender_account} and account_2 = #{reciver_account} and status != 1
+    </select>
+
+<!--    获取account的好友请求-->
+    <select id="getFriendsRequest" resultType="java.lang.String">
+        SELECT account_1 FROM friends WHERE account_2 = #{account}
+    </select>
+
+    <select id="getFriends" resultType="java.lang.String">
+        SELECT CASE account_1 WHEN #{account} THEN account_2 ELSE account_1 END AS friend_id FROM friends WHERE account_1 = #{account} and status = 1 or account_2 = #{account} and status = 1
+    </select>
+
+    <select id="getMessages" resultMap="Message">
+        SELECT * FROM Messages WHERE sender_account = #{account} or reciver_account = #{account}
+    </select>
+
+    <select id="getPicture" resultType="java.sql.Blob">
+        SELECT photo FROM Persons WHERE account = #{account}
+    </select>
+
+    <insert id="registerUser">
+        INSERT INTO Persons (account,password,info,photo,online,registertime) VALUES (#{account},#{password},#{info},#{photo,jdbcType=BLOB},#{online},#{registertime});
+    </insert>
+
+    <insert id="insertMessage">
+        INSERT INTO Messages (sender_account,message,reciver_account,time) VALUES (#{sender_account},#{message},#{reciver_account},#{time})
+    </insert>
+
+<!--    添加个一个好友请求记录-->
+    <insert id="addFriendRequest">
+        INSERT INTO friends (account_1,account_2,status) VALUES (#{sender_account},#{reciver_account},0)
+    </insert>
+
+    <update id="setOnline">
+        UPDATE Persons SET online = #{online} WHERE account = #{account}
+    </update>
+
+    <update id="changeFriendStatus">
+        UPDATE friends SET status = #{is_agree} WHERE account_1 = #{sender} and account_2 = #{reciver}
+    </update>
+
+    <delete id="deleteUser">
+        DELETE FROM Persons WHERE account = #{account}
+    </delete>
+
+</mapper>

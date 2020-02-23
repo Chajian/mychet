@@ -1,8 +1,8 @@
 package com.yezi.chet.community.operation;
 
-import com.yezi.chet.data.ApplicationData;
+import com.yezi.chet.data.SendInfo;
 import com.yezi.chet.data.constant.Permission;
-import com.yezi.chet.sql.sqlite.person.PersonExcuteSqlLite;
+import com.yezi.chet.sql.dao.ChetDao;
 import com.yezi.chet.tools.TokenUtil;
 
 /**
@@ -10,13 +10,13 @@ import com.yezi.chet.tools.TokenUtil;
  */
 public class TokenOperation extends BaseOperation{
 
-    public TokenOperation(PersonExcuteSqlLite excuteSqlLite) {
+    public TokenOperation(ChetDao excuteSqlLite) {
         super(excuteSqlLite);
     }
 
     @Override
-    public int opeartion(ApplicationData data) {
-        data.setToken(TokenUtil.sign(data.getUser().getAccount(),data.getUser().getPassword()));
+    public int opeartion(SendInfo data) {
+        data.getData().setToken(TokenUtil.sign(data.getData().getUser().getAccount(),data.getData().getUser().getPassword()));
         return Permission.SUCCEFF;
     }
 }

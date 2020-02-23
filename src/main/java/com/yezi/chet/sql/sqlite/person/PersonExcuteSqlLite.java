@@ -2,7 +2,6 @@ package com.yezi.chet.sql.sqlite.person;
 
 import com.yezi.chet.data.user.User;
 import com.yezi.chet.sql.sqlite.ExcuteSqlLite;
-import com.yezi.chet.tools.ConversionStringUser;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -13,21 +12,20 @@ import java.sql.SQLException;
  */
 public class PersonExcuteSqlLite extends ExcuteSqlLite {
 
-    public PersonExcuteSqlLite(Connection connection, String table) {
-        super(connection, table);
-
+    public PersonExcuteSqlLite(Connection connection, String table, String friends_table, String person_table) {
+        super(connection, table, friends_table, person_table);
     }
 
     //通过账号获取对象
     public synchronized User getUser(String account) throws SQLException {
         User user = null;
-        String[] marks = new String[]{"account"};//获取用户的数据
-        if(account!=null){
-            ResultSet resultSet = find(marks,new String[]{account});
-            user = new User(ConversionStringUser.ChangeUserInfo(resultSet.getString("info")),
-                    resultSet.getString("account"), resultSet.getString("password"));
-            user.setFriends(ConversionStringUser.ChangeUserFriends(resultSet.getString("friends")));
-        }
+//        String[] marks = new String[]{"account"};//获取用户的数据
+//        if(account!=null){
+//            ResultSet resultSet = find(marks,new String[]{account});
+//            user = new User(ConversionStringUser.ChangeUserInfo(resultSet.getString("info")),
+//                    resultSet.getString("account"), resultSet.getString("password"));
+//            user.setFriends(ConversionStringUser.ChangeUserFriends(resultSet.getString("friends")));
+//        }
         return user;
     }
 
@@ -58,11 +56,11 @@ public class PersonExcuteSqlLite extends ExcuteSqlLite {
 
             String account = user.getAccount();
             String password = user.getPassword();
-            String info = ConversionStringUser.ChangeUserInfo(user.getInfo());
-            String friends = ConversionStringUser.ChangeUserFriends(user.getFriends());
+//            String info = ConversionStringUser.ChangeUserInfo(user.getInfo());
+//            String friends = ConversionStringUser.ChangeUserFriends(user.getFriends());
 
             String[] marks = new String[]{"account","password","info","friends"};
-            return add(marks,new Object[]{account,password,info,friends});
+//            return add(marks,new Object[]{account,password,info,friends});
         }
         return false;
     }
@@ -79,7 +77,7 @@ public class PersonExcuteSqlLite extends ExcuteSqlLite {
     //从数据库中判断用户是否在线
     public synchronized boolean isOnline(String account)throws SQLException{
         User user = getUser(account);
-        return user.isOnline();
+        return user.CheckOnline();
     }
 
     //设置用户在线状态
@@ -87,7 +85,13 @@ public class PersonExcuteSqlLite extends ExcuteSqlLite {
         change(new String[]{"online"},new Object[online],"WHERE account = "+account);
     }
 
-    //将对方互相添加为好友
+    /*将对方互相添加为好友
+     *
+     * @param requester 发送请求者
+     * @param agreer 接受者
+     * @return
+     * @throws SQLException
+     */
     public synchronized boolean addFriend(String requester,String agreer)throws SQLException{
         ResultSet resultSet_requester = find(new String[]{"account"},new String[]{requester});
         ResultSet resultset_agreer = find(new String[]{"account"},new String[]{agreer});
@@ -103,6 +107,19 @@ public class PersonExcuteSqlLite extends ExcuteSqlLite {
                 return true;
             }
         }
+        return false;
+    }
+
+    /**
+     *
+     * @param requester 用户id1
+     * @param agreer 用户id2
+     * @return
+     * @throws SQLException
+     */
+    public synchronized boolean isFriend(String requester,String agreer)throws SQLException{
+        UserTable(friends_table);
+//        ResultSet resultSet = find()
         return false;
     }
 }
